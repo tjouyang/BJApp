@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_behavior="cn.edu.hnust.bjapp.optimization.FlingBehavior">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/main.backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/bg_home_ad"
+                app:layout_collapseMode="parallax" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:layout_collapseMode="pin">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+                    <Button
+                        android:id="@+id/fragment_home_searchButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="5dp"
+                        android:textSize="16sp"
+                        android:background="@android:drawable/btn_default_small"
+                        android:text="搜索"/>
+
+                    <EditText
+                        android:id="@+id/fragment_home_searchText"
+                        android:layout_width="196dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_toStartOf="@id/fragment_home_searchButton"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/app_name"
+                        android:textSize="14sp"
+                        android:background="@drawable/shape_rectangle"
+                        android:textColor="@color/wh"/>
+                    <!--android:background="@drawable/shape_rectangle"
+                    android:drawableLeft="@drawable/search"-->
+
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <cn.edu.hnust.bjapp.cptr.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_home_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e1e1e1"
+        cube_ptr:ptr_duration_to_close="200"
+        cube_ptr:ptr_duration_to_close_header="1000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_home_rvList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/wh"
+            />
+    </cn.edu.hnust.bjapp.cptr.PtrClassicFrameLayout>
+    <!-- app:borderWidth 该属性非常重要,如果不设置,在低版本会显示为正方形,
+    在5.0以后的才不会有阴影效果-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ui_10_dip"
+        android:src="@mipmap/add"
+        app:borderWidth="0dp"
+        app:fabSize="normal"
+        app:layout_anchor="@id/fragment_home_rvList"
+        app:layout_anchorGravity="bottom|right" />
+</android.support.design.widget.CoordinatorLayout>

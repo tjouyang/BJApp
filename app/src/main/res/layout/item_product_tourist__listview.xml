@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/item_product"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:clickable="true">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:paddingStart="@dimen/ui_10_dip">
+
+            <cn.edu.hnust.bjapp.ui.CircleImageView
+                android:id="@+id/user_header"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:src="@mipmap/ic" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/user_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/textviewshape"
+                android:clickable="false"
+                android:focusable="false"
+                android:gravity="bottom"
+                android:text="会飞的鱼"
+                android:textColor="@android:color/primary_text_light"
+                android:textIsSelectable="false"
+                android:textSize="12sp" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/linearLayoutCompat"
+            android:padding="5dp">
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/textviewshape"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="旅行景点  ："
+                android:textColor="@android:color/primary_text_light"
+                android:textIsSelectable="false" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/product_tourist_aim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/textviewshape"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="  北海道"
+                android:textColor="@android:color/primary_text_light"
+                android:textIsSelectable="false" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/product_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="5dp"
+                android:autoLink="all"
+                android:background="@drawable/textviewshape"
+                android:focusable="false"
+                android:gravity="start"
+                android:text="描   述"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textIsSelectable="false"
+                android:textSize="12sp" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayoutCompat2"
+            android:padding="5dp">
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/textviewshape"
+                android:editable="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="时间  ："
+                android:textColor="@android:color/primary_text_light"
+                android:textIsSelectable="false"
+                android:textSize="12sp"
+                android:layout_toStartOf="@+id/product_startAndEndTime" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/product_startAndEndTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/textviewshape"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="16-9-25至9-30"
+                android:textColor="@android:color/primary_text_light"
+                android:textIsSelectable="false"
+                android:textSize="12sp" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/linearLayoutCompat3">
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginStart="45dp"
+                android:background="@drawable/textviewshape"
+                android:focusable="false"
+                android:gravity="start"
+                android:text="旅行人数："
+                android:textColor="@android:color/primary_text_light"
+                android:textIsSelectable="false"
+                android:textSize="12sp" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/product_tourist_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/textviewshape"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="2"
+                android:textColor="@android:color/primary_text_light"
+                android:textIsSelectable="false"
+                android:textSize="12sp" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/product_button"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@+id/linearLayoutCompat4"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/item_product_button_selector"
+            android:gravity="center"
+            android:text="我要抢单"
+            android:textSize="12sp" />
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gold" />-->
+
+        <TextView
+            android:id="@+id/product_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

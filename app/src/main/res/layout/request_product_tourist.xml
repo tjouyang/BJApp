@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_request">
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        style="@style/marginSE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include"
+        android:layout_marginTop="@dimen/ui_10_dip"
+        android:padding="30dip">
+
+        <TableRow>
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:background="@drawable/textviewshape"
+                android:focusable="false"
+                android:text="目的地" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/request_dest"
+                android:scrollHorizontally="true"
+                android:lines="1"
+                android:hint="地名哦~" />
+        </TableRow>
+
+        <TableRow>
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:background="@drawable/textviewshape"
+                android:focusable="false"
+                android:text="简要介绍" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/request_description"
+                android:scrollHorizontally="true"
+                android:lines="1"
+                android:hint="简要的描述一下吧~" />
+        </TableRow>
+
+        <TableRow>
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:background="@drawable/textviewshape"
+                android:focusable="false"
+                android:text="出发日期" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/request_starttime"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:inputType="datetime" />
+        </TableRow>
+
+        <TableRow>
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:background="@drawable/textviewshape"
+                android:focusable="false"
+                android:text="结束日期" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/request_endtime"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:inputType="datetime" />
+        </TableRow>
+
+        <TableRow>
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:background="@drawable/textviewshape"
+                android:focusable="false"
+                android:text="当前人数" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/request_num"
+                android:hint=""
+                android:inputType="number"
+                android:maxLength="3"/>
+        </TableRow>
+    </TableLayout>
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/request_container"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@+id/tableLayout">
+
+        <Button
+            android:id="@+id/request_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_selector"
+            android:text="确认发布"
+            android:layout_gravity="center_horizontal|center" />
+    </android.support.v7.widget.LinearLayoutCompat>
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/request_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

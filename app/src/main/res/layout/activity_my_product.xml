@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <cn.edu.hnust.bjapp.cptr.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/my_product_guide_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e1e1e1"
+        android:visibility="gone"
+        cube_ptr:ptr_duration_to_close="200"
+        cube_ptr:ptr_duration_to_close_header="1000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_product_guide_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </cn.edu.hnust.bjapp.cptr.PtrClassicFrameLayout>
+
+    <cn.edu.hnust.bjapp.cptr.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/my_product_tourist_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e1e1e1"
+        android:visibility="gone"
+        cube_ptr:ptr_duration_to_close="200"
+        cube_ptr:ptr_duration_to_close_header="1000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_product_tourist_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </cn.edu.hnust.bjapp.cptr.PtrClassicFrameLayout>
+</LinearLayout>

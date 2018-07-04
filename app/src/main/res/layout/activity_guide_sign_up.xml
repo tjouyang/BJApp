@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8">
+
+        <!--<ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/icon_addpic_unfocused"
+            android:layout_above="@+id/">-->
+
+        <AutoCompleteTextView
+            android:id="@+id/sign_up_notice_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sign_up_description"
+            android:layout_below="@+id/imageView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:focusable="false"
+            android:textIsSelectable="false" />
+
+        <EditText
+            android:id="@+id/sign_up_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sign_up_bt"
+            android:hint="描述"
+            android:maxLines="1"
+            android:padding="@dimen/ui_10_dip"
+            android:scrollbars="horizontal" />
+
+        <Button
+            android:id="@+id/sign_up_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:background="@drawable/button_selector"
+            android:text="发起签到" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/sign_up_guide_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="2"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已经签到的成员:" />
+
+        <cn.edu.hnust.bjapp.cptr.PtrClassicFrameLayout xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/sign_up_home_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e1e1e1"
+            cube_ptr:ptr_duration_to_close="200"
+            cube_ptr:ptr_duration_to_close_header="1000"
+            cube_ptr:ptr_keep_header_when_refresh="true"
+            cube_ptr:ptr_pull_to_fresh="false"
+            cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+            cube_ptr:ptr_resistance="1.7">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/sign_up_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </cn.edu.hnust.bjapp.cptr.PtrClassicFrameLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:id="@+id/sign_up_guide_about"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/ui_10_dip"
+                android:text="关于签到"
+                android:textColor="@color/darkorange" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="先打开数据流量或者wifi,然后填写好描述,点击上方按钮.获取好了签到码,通知游客填写签到码,就能进行签到了" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/ui_10_dip"
+                android:text="定位失败怎么办"
+                android:textColor="@color/darkorange" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="确保连接上了网络,最好同时打开GPS" />
+
+            <TextView
+                android:id="@+id/sign_up_guide_watch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/view_selector"
+                android:clickable="true"
+                android:focusable="false"
+                android:padding="@dimen/ui_10_dip"
+                android:text="点击查看已签到的游客"
+                android:textColor="@color/tianyilan" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="20dp">
+
+        <Button
+            android:id="@+id/sign_up_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:text="开启分散活动" />
+
+        <Button
+            android:id="@+id/sign_up_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:text="结束分散活动" />
+    </LinearLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/sign_up_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

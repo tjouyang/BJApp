@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="30"
+    android:background="@mipmap/login"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="@string/welcome"
+        android:textColor="@color/hui2"
+        android:textSize="60sp"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="3"
+        android:background="@color/touming"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用 户 名"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/login_username"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginStart="@dimen/ui_10_dip"
+                android:background="@drawable/login_background"
+                android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:drawableStart="@mipmap/user"
+                android:inputType="textPersonName"
+                android:textSize="12sp">
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="密      码"
+                android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginStart="@dimen/ui_10_dip"
+            android:background="@drawable/login_background"
+            android:drawableStart="@mipmap/lock"
+            android:inputType="textPassword"
+            android:textSize="12sp" />
+        </LinearLayout>
+        <!--android:drawableStart="@mipmap/lock"-->
+        <RadioGroup
+            android:id="@+id/login_rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/login_rb_tourist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/iamtourist" />
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/login_rb_guide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@string/iamguide" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/ui_10_dip"
+            android:background="@drawable/button_selector"
+            android:text="@string/login_now"
+            android:textColor="@color/wh"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingTop="@dimen/ui_10_dip"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <cn.edu.hnust.bjapp.ui.CircleImageView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/view_selector"
+            android:clickable="true"
+            android:src="@mipmap/qq"
+            android:text="QQ登录" />
+
+        <cn.edu.hnust.bjapp.ui.CircleImageView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/view_selector"
+            android:clickable="true"
+            android:src="@mipmap/weibo"
+            android:text="微信登录" />
+
+        <cn.edu.hnust.bjapp.ui.CircleImageView
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/view_selector"
+            android:clickable="true"
+            android:src="@mipmap/wechat"
+            android:text="微博登录" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/login_forgetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/forgetPassword"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/login_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="20dp"
+            android:text="@string/register_now"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/login_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

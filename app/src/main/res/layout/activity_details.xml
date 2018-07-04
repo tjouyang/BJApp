@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+    <!--<android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_behavior="cn.edu.hnust.bjapp.optimization.FlingBehavior">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/main.backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/bg_home_ad"
+                app:layout_collapseMode="parallax" />
+            <include layout="@layout/toolbar"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways"/>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/bg_travel"
+                android:contentDescription="@null"
+                />
+        </LinearLayout>
+    </ScrollView>-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/ui_10_dip"
+                android:text="sdfa"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/ui_10_dip"
+                android:layout_marginTop="60dp"
+                android:text="sdfa"
+                android:textSize="24sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/ui_10_dip"
+                android:text="sdfa"
+                android:textSize="24sp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

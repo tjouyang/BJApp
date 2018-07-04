@@ -1,0 +1,41 @@
+<resources>
+
+    <string name="app_name">八戒游</string>
+    <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
+    <string name="scan_title">二维码扫描</string>
+    <string name="start">开始</string>
+    <string name="search_aim">搜索目的地</string>
+    <string name="search">搜索</string>
+    <string name="back">返回</string>
+    <string name="welcome">Welcome</string>
+    <string name="login">用户名</string>
+    <string name="password">密码</string>
+    <string name="login_now">立即登录</string>
+    <string name="forgetPassword">忘记密码?</string>
+    <string name="split">|</string>
+    <string name="register_now">现在注册</string>
+
+    <string name="only_choose_num">超出可选图片张数</string>
+    <string name="finish">完成</string>
+    <string name="invalidSD">sdcard无效或没有插入！</string>
+    <string name="photo">选择相册</string>
+    <string name="album">相册</string>
+    <string name="preview">预览</string>
+    <string name="unfinished">未完成</string>
+    <string name="camera_cancel">取消</string>
+    <string name="no_photo">相册没有图片</string>
+
+    <string name="iamtourist">我是游客</string>
+    <string name="iamguide">我是导游</string>
+
+
+    <string name="cube_ptr_pull_down">下拉</string>
+    <string name="cube_ptr_pull_down_to_refresh">下拉刷新</string>
+    <string name="cube_ptr_release_to_refresh">释放刷新</string>
+    <string name="cube_ptr_refreshing">加载中...</string>
+    <string name="cube_ptr_refresh_complete">更新完成.</string>
+    <string name="cube_ptr_last_update">上次更新:&#160;</string>
+    <string name="cube_ptr_seconds_ago">&#160;秒之前</string>
+    <string name="cube_ptr_minutes_ago">&#160;分钟之前</string>
+    <string name="cube_ptr_hours_ago">&#160;小时之前</string>
+</resources>

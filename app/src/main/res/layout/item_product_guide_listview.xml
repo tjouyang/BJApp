@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/marginSE"
+    android:layout_width="match_parent"
+    android:layout_height="230dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:id="@+id/item_product">
+
+    <!--中文加粗需使用以下代码控制
+    TextPaint paint = textView.getPaint();
+    paint.setFakeBoldText(true);-->
+
+    <android.support.v7.widget.AppCompatAutoCompleteTextView
+        android:id="@+id/product_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/line1"
+        android:layout_toEndOf="@+id/product_guide_imageView"
+        android:background="@drawable/textviewshape"
+        android:editable="false"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="这是简单的描述"
+        android:textColor="@android:color/primary_text_light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/line1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/product_guide_title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:background="@drawable/textviewshape"
+            android:focusable="false"
+            android:gravity="center"
+            android:lines="2"
+            android:text="@string/welcome"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/product_guide_priseText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_10_dip"
+            android:background="@drawable/textviewshape"
+            android:focusable="false"
+            android:text="1314"
+            android:layout_gravity="center"
+            android:textColor="@color/pink"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/product_guide_priseButton"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:background="@mipmap/collection"
+            android:focusable="false" />
+    </LinearLayout>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/product_guide_imageView"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/product_guide_imageView"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_description"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_weight="1"
+            android:background="@drawable/textviewshape"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="998"
+            android:textColor="@color/red"
+            android:visibility="invisible" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/product_button"
+            style="@style/marginSE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/product_description"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:text="感兴趣"
+            android:gravity="center"
+            android:textColor="@color/pink" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayoutCompat"
+        android:gravity="center">
+
+        <!--<CircleImageView
+            android:id="@+id/user_header"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/ic"
+            android:visibility="gone" />-->
+
+        <!--<android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/user_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textviewshape"
+            android:focusable="false"
+            android:text="笑傲江湖"
+            android:textSize="12sp"
+            android:visibility="gone" />-->
+
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/product_deadline"
+            style="@style/marginSE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/textviewshape"
+            android:focusable="false"
+            android:text="16-10-11截止"
+
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="12sp" />
+
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textviewshape"
+            android:focusable="false"
+            android:text="已报团"
+            android:textColor="@android:color/primary_text_light"
+            android:textIsSelectable="true"
+            android:textSize="12sp" />
+
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/product_personWithLimit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textviewshape"
+            android:focusable="false"
+            android:text="365/500人"
+            android:textColor="@android:color/primary_text_light"
+            android:textIsSelectable="true"
+            android:textSize="12sp" />
+
+       <!-- <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/textviewshape"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="发布于2016"
+            android:textIsSelectable="false"
+            android:textSize="12sp" />-->
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <ImageView
+        android:id="@+id/product_guide_imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/line1"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic" />
+
+    <TextView
+        android:id="@+id/product_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/antiquewhite" />
+</RelativeLayout>

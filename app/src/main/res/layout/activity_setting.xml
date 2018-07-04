@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/bg_setting">
+
+    <include layout="@layout/toolbar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/setting_load_enable"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text=" 2G/3G/4G下不加载图片"
+            android:drawableStart="@mipmap/setting_1"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray" />
+
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/view_selector"
+            android:cursorVisible="false"
+            android:drawableEnd="@mipmap/right_arraw"
+            android:focusable="false"
+            android:drawableStart="@mipmap/setting_2"
+            android:text=" 检查更新" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray" />
+
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:layout_width="match_parent"
+            android:id="@+id/setting_clean_cache"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/view_selector"
+            android:cursorVisible="false"
+            android:drawableEnd="@mipmap/right_arraw"
+            android:focusable="false"
+            android:text="清除缓存" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray" />
+
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/view_selector"
+            android:cursorVisible="false"
+            android:drawableEnd="@mipmap/right_arraw"
+            android:focusable="false"
+            android:text="关于软件" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray" />
+
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/view_selector"
+            android:cursorVisible="false"
+            android:drawableEnd="@mipmap/right_arraw"
+            android:focusable="false"
+            android:text="意见反馈" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray" />
+    </LinearLayout>
+</LinearLayout>-->
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_setting">
+    <include layout="@layout/toolbar" />
+    <TableRow android:orientation="horizontal"
+        android:padding="@dimen/ui_10_dip">
+        <ImageView
+            android:src="@mipmap/setting_1"
+            android:layout_gravity="center"/>
+        <android.support.v7.widget.SwitchCompat
+            android:layout_weight="1"
+            android:id="@+id/setting_load_enable"
+            android:layout_width="match_parent"
+            android:text="2G/3G/4G下不加载图片"/>
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray" />
+
+    <TableRow android:orientation="horizontal"
+        android:padding="@dimen/ui_10_dip">
+        <ImageView
+            android:src="@mipmap/setting_2"
+            android:layout_gravity="center"/>
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:layout_weight="1"
+            android:background="@drawable/view_selector"
+            android:cursorVisible="false"
+            android:drawableEnd="@mipmap/right_arraw"
+            android:focusable="false"
+            android:text="检查更新" />
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray" />
+
+    <TableRow android:orientation="horizontal"
+        android:padding="@dimen/ui_10_dip">
+        <ImageView
+            android:src="@mipmap/setting_3"
+            android:layout_gravity="center"/>
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:layout_weight="1"
+            android:id="@+id/setting_clean_cache"
+            android:background="@drawable/view_selector"
+            android:cursorVisible="false"
+            android:drawableEnd="@mipmap/right_arraw"
+            android:focusable="false"
+            android:text="检查更新" />
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray" />
+
+    <TableRow android:orientation="horizontal"
+        android:padding="@dimen/ui_10_dip">
+        <ImageView
+            android:src="@mipmap/setting_4"
+            android:layout_gravity="center"/>
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:layout_weight="1"
+            android:background="@drawable/view_selector"
+            android:cursorVisible="false"
+            android:drawableEnd="@mipmap/right_arraw"
+            android:focusable="false"
+            android:text="清除缓存" />
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray" />
+
+    <TableRow android:orientation="horizontal"
+        android:padding="@dimen/ui_10_dip">
+        <ImageView
+            android:src="@mipmap/setting_5"
+            android:layout_gravity="center"/>
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:layout_weight="1"
+            android:background="@drawable/view_selector"
+            android:cursorVisible="false"
+            android:drawableEnd="@mipmap/right_arraw"
+            android:focusable="false"
+            android:text="关于软件" />
+    </TableRow>
+</TableLayout>

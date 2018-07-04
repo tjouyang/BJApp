@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_setting"
+    android:numColumns="3"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/ui_10_dip"
+        android:layout_weight="4">
+
+        <TableRow>
+
+            <AutoCompleteTextView
+                android:layout_gravity="center"
+                android:background="@drawable/textviewshape"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="头像" />
+
+            <ImageView
+                android:id="@+id/user_info_header"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.1"
+                android:src="@mipmap/right_arraw" />
+        </TableRow>
+
+        <TableRow>
+
+            <AutoCompleteTextView
+                android:layout_gravity="center"
+                android:background="@drawable/textviewshape"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="昵称" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/user_info_nick"
+                android:layout_weight="2"
+                android:hint="这是昵称"
+                android:maxLength="10" />
+        </TableRow>
+
+        <TableRow>
+
+            <AutoCompleteTextView
+                android:layout_gravity="center"
+                android:background="@drawable/textviewshape"
+                android:focusable="false"
+                android:text="性别" />
+
+            <RadioGroup
+                android:id="@+id/user_info_rg"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/man"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="男" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/woman"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="女" />
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow>
+
+            <AutoCompleteTextView
+                android:layout_gravity="center"
+                android:background="@drawable/textviewshape"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="年龄" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/user_info_age"
+                android:layout_weight="2"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLength="3" />
+        </TableRow>
+
+        <TableRow>
+
+            <AutoCompleteTextView
+                android:layout_gravity="center"
+                android:background="@drawable/textviewshape"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="地址" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/user_info_address"
+                android:layout_weight="2"
+                android:inputType="textEmailSubject"
+                android:lines="1" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/user_info_tourist_job"
+            android:visibility="gone">
+
+            <AutoCompleteTextView
+                android:layout_gravity="center"
+                android:background="@drawable/textviewshape"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="职业" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/user_info_job"
+                android:layout_weight="2" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/user_info_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="修改" />
+    </LinearLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/user_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"/>
+</LinearLayout>

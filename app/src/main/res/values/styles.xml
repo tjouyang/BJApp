@@ -1,0 +1,60 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Customize your theme here. -->
+        <item name="android:theme">@style/AppTheme.NoActionBar</item>
+		<!--<item name="android:windowBackground">@mipmap/bg_welcome</item>  -->
+		<item name="android:windowNoTitle">true</item>
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <!-- 设置activity切换动画 -->
+        <!--<item name="android:windowAnimationStyle">@style/activityAnimation</item>-->
+    </style>
+    <!-- Translate style-->
+    <!--<style name="activityAnimation" parent="@android:style/Animation" mce_bogus="1">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>     &lt;!&ndash;下个Activity进入动画&ndash;&gt;
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>      &lt;!&ndash;当前Activity退出动画&ndash;&gt;
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>     &lt;!&ndash;上个Activity进入动画&ndash;&gt;
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>    &lt;!&ndash;退出动画&ndash;&gt;
+    </style>-->
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="MyDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- 时间选择样式-->
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/android:transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--<style name="dot_style">
+        <item name="android:background">@drawable/black_oval</item>
+        <item name="android:layout_width">3dp</item>
+        <item name="android:layout_height">3dp</item>
+    </style>
+-->
+    <style name="marginSE">
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+    </style>
+</resources>

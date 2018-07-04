@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginStart="@dimen/ui_10_dip"
+    android:layout_height="45dp"
+    android:clickable="true"
+    android:background="@drawable/view_selector"
+    android:padding="@dimen/ui_10_dip"
+    android:orientation="horizontal">
+
+    <cn.edu.hnust.bjapp.ui.CircleImageView
+        android:id="@+id/user_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic" />
+
+    <TextView
+        android:id="@+id/user_nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="9"
+        android:background="@null"
+        android:textIsSelectable="false"
+        android:focusable="false"
+        android:clickable="false"
+        android:gravity="start"
+        android:textStyle="normal"
+        android:textColor="@android:color/primary_text_light"
+        android:text="这是昵称" />
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"/>
+    <!--用于保存id -->
+    <TextView
+        android:id="@+id/user_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0" />
+</LinearLayout>

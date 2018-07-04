@@ -1,0 +1,89 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.edu.hnust.tbapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--以下四个专为扫描二维码的权限-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <!-- 百度 地图位置相关 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    //以下为屏幕支持设置
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name="cn.edu.hnust.bjapp.utils.DemoApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 百度密钥 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="mEP2buGdDIRZVf7TBFett5Pl2gjLrYkM" />
+
+        <!--这个service很重要,没有它,不能定位-->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:permission="android.permission.BAIDU_LOCATION_SERVICE"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.6" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="cn.edu.hnust.bjapp.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="cn.edu.hnust.bjapp.LoginActivity"/>
+        <activity
+            android:name="cn.edu.hnust.bjapp.MainActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--android:windowSoftInputMode="stateAlwaysHidden|adjustResize"-->
+        <activity android:name="cn.edu.hnust.bjapp.RegisterActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="cn.edu.hnust.bjapp.ProductRequestActivity" />
+        <activity android:name="cn.edu.hnust.bjapp.UserInfoActivity" />
+        <activity android:name="cn.edu.hnust.bjapp.PositionActivity" />
+        <activity android:name="cn.edu.hnust.bjapp.SignUpActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity android:name="cn.edu.hnust.bjapp.GroupInfoActivity" />
+        <activity
+            android:name="cn.edu.hnust.bjapp.scan.MipcaActivityCapture"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name="cn.edu.hnust.bjapp.SettingActivity" />
+        <activity android:name="cn.edu.hnust.bjapp.MyProductActivity"/>
+        <activity android:name="cn.edu.hnust.bjapp.IDActivity"/>
+        <activity android:name="cn.edu.hnust.bjapp.DetailsActivity"/>
+        <activity android:name="cn.edu.hnust.bjapp.MyFootActivity"/>
+
+        <service android:name="cn.edu.hnust.bjapp.service.QueryInfomationService" />
+        <service android:name="cn.edu.hnust.bjapp.service.QueryService"/>
+        <service android:name="cn.edu.hnust.bjapp.service.PositionService"/>
+    </application>
+</manifest>

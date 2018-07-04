@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:padding="@dimen/ui_10_dip">
+
+        <TableRow>
+
+            <AutoCompleteTextView
+                android:layout_gravity="center"
+                android:background="@drawable/textviewshape"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="手机号" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/identify_phone"
+                android:layout_weight="2"
+                android:hint="手机号"
+                android:maxLength="11" />
+        </TableRow>
+
+        <TableRow>
+
+            <AutoCompleteTextView
+                android:layout_gravity="center"
+                android:background="@drawable/textviewshape"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="邮箱" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/identify_email"
+                android:layout_weight="2"
+                android:maxLines="2"
+                android:hint="邮箱" />
+        </TableRow>
+
+        <TableRow>
+
+            <AutoCompleteTextView
+                android:layout_gravity="center"
+                android:background="@drawable/textviewshape"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="身份证号" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/identify_id_card"
+                android:layout_weight="2"
+                android:maxLines="2"/>
+        </TableRow>
+
+        <TableRow android:id="@+id/identify_guide_watch1">
+
+            <AutoCompleteTextView
+                android:layout_gravity="center"
+                android:background="@drawable/textviewshape"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="公司" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/identify_guide_company"
+                android:layout_weight="2"
+                android:maxLines="2"
+                android:hint="公司" />
+        </TableRow>
+
+        <TableRow android:id="@+id/identify_guide_watch2">
+
+            <AutoCompleteTextView
+                android:layout_gravity="center"
+                android:background="@drawable/textviewshape"
+                android:focusable="false"
+                android:text="导游证号" />
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/identify_guide_number"
+                android:layout_weight="2"
+                android:maxLines="2"
+                android:hint="导游证号" />
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/identify_commit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="提交" />
+    </LinearLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/identify_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

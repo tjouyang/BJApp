@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/main_ib_container"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_above="@+id/main_container">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:id="@+id/main_ll_0"
+                android:clickable="true">
+                <ImageView
+                    android:id="@+id/main_ib0"
+                    android:layout_marginStart="@dimen/ui_10_dip"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:src="@mipmap/tabbar_travel" />
+                <TextView
+                    android:id="@+id/main_tv0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="发现"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:layout_gravity="center"
+                    android:background="@drawable/textviewshape"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:id="@+id/main_ll_1"
+                android:clickable="true">
+                <ImageView
+                    android:layout_marginStart="@dimen/ui_10_dip"
+                    android:id="@+id/main_ib1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:focusable="false"
+                    android:layout_weight="1"
+                    android:src="@mipmap/tabbar_explore" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/main_tv1"
+                    android:layout_weight="1"
+                    android:text="旅行"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:layout_gravity="center"
+                    android:background="@drawable/textviewshape"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:id="@+id/main_ll_2"
+                android:clickable="true">
+                <ImageView
+                    android:id="@+id/main_ib2"
+                    android:layout_marginStart="@dimen/ui_10_dip"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/tabbar_center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/main_tv2"
+                    android:layout_weight="1"
+                    android:text="我的"
+                    android:textIsSelectable="false"
+                    android:focusable="false"
+                    android:layout_gravity="center"
+                    android:background="@drawable/textviewshape"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_above="@id/main_ib_container"
+            android:background="@color/black" />
+
+        <cn.edu.hnust.bjapp.ui.MyViewPager
+            android:id="@+id/main_vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/main_ib_container"
+            android:paddingBottom="2dp" />
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/main_container"/>
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

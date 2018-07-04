@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/whitesmoke">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:id="@+id/fragment_guide_control_sign"
+        android:background="@drawable/view_selector">
+        <cn.edu.hnust.bjapp.ui.CircleImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/control_travel_alone"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    分散活动"
+            android:textSize="18sp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:id="@+id/fragment_guide_control_send"
+        android:background="@drawable/view_selector">
+        <cn.edu.hnust.bjapp.ui.CircleImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/control_message"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="    发送通知"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:id="@+id/fragment_guide_control_warning"
+        android:padding="10dp"
+        android:background="@drawable/view_selector">
+        <cn.edu.hnust.bjapp.ui.CircleImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/control_warning"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="    位置警报"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:padding="10dp"
+        android:id="@+id/fragment_guide_control_info"
+        android:orientation="horizontal"
+        android:background="@drawable/view_selector">
+        <cn.edu.hnust.bjapp.ui.CircleImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/control_manage"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="    游团信息"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:id="@+id/fragment_guide_control_finish"
+        android:background="@drawable/view_selector">
+        <cn.edu.hnust.bjapp.ui.CircleImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/control_finish"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    结束旅游"
+            android:textSize="18sp"
+            android:textColor="@color/red"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</LinearLayout>
