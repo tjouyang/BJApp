@@ -37,7 +37,7 @@
         <!-- 百度密钥 -->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="mEP2buGdDIRZVf7TBFett5Pl2gjLrYkM" />
+            android:value="xxx" />
 
         <!--这个service很重要,没有它,不能定位-->
         <service
